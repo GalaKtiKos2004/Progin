@@ -44,7 +44,7 @@ public class ItemSlot : MonoBehaviour
     {
         if (_item != null)
         {
-            _inventoryUi.SelectItem(_item);
+            _inventoryUi.SelectItem(this);
         }
     }
 }

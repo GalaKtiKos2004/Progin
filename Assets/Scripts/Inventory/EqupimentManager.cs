@@ -8,6 +8,11 @@ public class EqupimentManager : MonoBehaviour
     [SerializeField] private ItemSlot _armorSlot;
     [SerializeField] private ItemSlot _shieldSlot;
     [SerializeField] private ItemSlot _helmetSlot;
+    
+    public Item Weapon => _weaponSlot.ItemInSlot;
+    public Item Armor => _armorSlot.ItemInSlot;
+    public Item Shield => _shieldSlot.ItemInSlot;
+    public Item Helmet => _helmetSlot.ItemInSlot;
 
     public void EquipItem(Item item)
     {
@@ -27,6 +32,14 @@ public class EqupimentManager : MonoBehaviour
         {
             SwapEquipment(_helmetSlot, item);
         }
+    }
+
+    public void Clear()
+    {
+        _weaponSlot.Clear();
+        _armorSlot.Clear();
+        _shieldSlot.Clear();
+        _helmetSlot.Clear();
     }
 
     private void SwapEquipment(ItemSlot equipSlot, Item newItem)

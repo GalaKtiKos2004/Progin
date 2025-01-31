@@ -29,6 +29,11 @@ public class SkeletonRotator : MonoBehaviour
 
     private void Update()
     {
+        if (_canRotate == false)
+        {
+            return;
+        }
+        
         if (_target == null)
         {
             return;

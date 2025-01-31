@@ -11,14 +11,18 @@ public class InventoryUi : MonoBehaviour
     [SerializeField] private Button _dropButton;
     [SerializeField] private TextMeshProUGUI _descriptionText;
     [SerializeField] private Image _inventoryImage;
+    [SerializeField] private CanvasGroup _canvasGroup;
     
     private Item _selectedItem;
+    private ItemSlot _selectedItemSlot;
     private bool _isActive = false;
 
     private void OnEnable()
     {
         _useButton.onClick.AddListener(UseItem);
         _dropButton.onClick.AddListener(DropItem);
+        _canvasGroup.alpha = 0;
+        _canvasGroup.blocksRaycasts = false;
     }
 
     private void Update()
@@ -26,21 +30,24 @@ public class InventoryUi : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             _isActive = !_isActive;
-            _inventoryImage.gameObject.SetActive(_isActive);
+            
+            _canvasGroup.alpha = _isActive ? 1 : 0;
+            _canvasGroup.blocksRaycasts = _isActive;
         }
     }
 
-    public void SelectItem(Item item)
+    public void SelectItem(ItemSlot item)
     {
-        _selectedItem = item;
-        _descriptionText.text = item.Description;
+        _selectedItemSlot = item;
+        _selectedItem = item.ItemInSlot;
+        _descriptionText.text = _selectedItem.Description;
     }
 
     private void UseItem()
     {
         if (_selectedItem != null)
         {
-            _inventory.RemoveItem(_selectedItem);
+            _inventory.RemoveItemFromSlot(_selectedItemSlot);
             _equipmentManager.EquipItem(_selectedItem);
         }
     }
@@ -51,7 +58,7 @@ public class InventoryUi : MonoBehaviour
         Debug.Log("drop item");
         if (_selectedItem != null)
         {
-            _inventory.RemoveItem(_selectedItem);
+            _inventory.RemoveItemFromSlot(_selectedItemSlot);
             _selectedItem = null;
             _descriptionText.text = "";
         }

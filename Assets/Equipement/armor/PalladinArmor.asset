@@ -15,11 +15,11 @@ MonoBehaviour:
   Name: "\u0411\u0440\u043E\u043D\u044F \u043F\u0430\u043B\u043B\u0430\u0434\u0438\u043D\u0430"
   Description: "\u0417\u043E\u043B\u043E\u0442\u0430\u044F \u043F\u0430\u043B\u043B\u0430\u0434\u0438\u043D\u0441\u043A\u0430\u044F
     \u0431\u0440\u043E\u043D\u044F. +10 \u043A \u0431\u0440\u043E\u043D\u0435."
-  icon: {fileID: 21300000, guid: 29a850da37fea4d41a0e0d02a098f229, type: 3}
+  icon: {fileID: 21300000, guid: bd4135821b614e249b696bbed3a169c1, type: 3}
   IsSword: 0
   IsHelmet: 0
   IsShield: 0
   IsArmor: 1
   Def: 10
   Damage: 0
-  DropChance: 2.5
+  DropChance: 1.25

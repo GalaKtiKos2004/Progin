@@ -16,12 +16,12 @@ MonoBehaviour:
   Description: "\u041C\u0435\u0447 \u0431\u044B\u043B \u043F\u0440\u0435\u0434\u043D\u043E\u0437\u043D\u0430\u0447\u0435\u043D
     \u0434\u043B\u044F \u0442\u0438\u0442\u0430\u043D\u0430. \u042D\u0442\u0438\u043C
     \u043C\u0435\u0447\u043E\u043C \u0442\u0438\u0442\u0430\u043D \u043F\u0435\u0440\u0435\u0440\u0435\u0437\u0430\u043B
-    100 \u0434\u0440\u0430\u043A\u043E\u043D\u043E\u0432."
+    100 \u0434\u0440\u0430\u043A\u043E\u043D\u043E\u0432"
   icon: {fileID: 21300000, guid: 1d0579a2ab145f94bbfcb8ec28d76e7c, type: 3}
   IsSword: 1
   IsHelmet: 0
   IsShield: 0
   IsArmor: 0
   Def: 0
-  Damage: 30
-  DropChance: 1
+  Damage: 17
+  DropChance: 0.2

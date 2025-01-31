@@ -5,6 +5,7 @@ public abstract class Fighter : MonoBehaviour
 {
     [SerializeField] private float _damage;
     [SerializeField] private float _cooldownTime;
+    [SerializeField] private float _baseDefense;
     [SerializeField] private Trigger _trigger;
 
     private WaitForSeconds _cooldown;
@@ -41,14 +42,27 @@ public abstract class Fighter : MonoBehaviour
     {
         if (IsCooldown == false)
         {
-            fighter.TakeDamage(_damage);
+            float totalDamage = GetTotalDamage();
+            fighter.TakeDamage(totalDamage);
             StartCoroutine(Cooldown());
         }
     }
 
     private void TakeDamage(float damage)
     {
-        _health.TakeDamage(damage);
+        float totalDefense = GetTotalDefense();
+        float finalDamage = Mathf.Max(damage - totalDefense, 0);
+        _health.TakeDamage(finalDamage);
+    }
+
+    protected virtual float GetTotalDamage()
+    {
+        return _damage;
+    }
+
+    protected virtual float GetTotalDefense()
+    {
+        return _baseDefense;
     }
 
     private void OnTriggerEntered(Collider2D other)
@@ -58,7 +72,6 @@ public abstract class Fighter : MonoBehaviour
     }
 
     private void OnTriggerExited(Collider2D other) => InTrigger = false;
-
 
     private IEnumerator Cooldown()
     {

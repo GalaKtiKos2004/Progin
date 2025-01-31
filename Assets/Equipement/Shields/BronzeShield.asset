@@ -21,4 +21,4 @@ MonoBehaviour:
   IsArmor: 0
   Def: 3
   Damage: 0
-  DropChance: 7.5
+  DropChance: 5

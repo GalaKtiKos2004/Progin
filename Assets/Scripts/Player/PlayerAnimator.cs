@@ -7,6 +7,7 @@ public class PlayerAnimator : MonoBehaviour
 {
     private const string Speed = "Speed";
     private const string Attack = "Attack";
+    private const string Death = "Death";
     
     private Animator _animator;
     private PlayerMover _playerMover;
@@ -23,12 +24,14 @@ public class PlayerAnimator : MonoBehaviour
     {
         _playerMover.Moved += OnMoved;
         _playerFighter.Attacked += OnAttack;
+        _playerFighter.Died += OnDied;
     }
 
     private void OnDisable()
     {
         _playerMover.Moved -= OnMoved;
         _playerFighter.Attacked -= OnAttack;
+        _playerFighter.Died -= OnDied;
     }
 
     private void OnMoved(float speed)
@@ -39,5 +42,10 @@ public class PlayerAnimator : MonoBehaviour
     private void OnAttack()
     {
         _animator.SetTrigger(Attack);
+    }
+
+    private void OnDied()
+    {
+        _animator.SetTrigger(Death);
     }
 }

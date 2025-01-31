@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u0428\u043B\u0435\u043C \u0412\u0438\u043A\u0438\u043D\u0433\u043E\u0432"
   Description: "\u0412\u0435\u043B\u0438\u043A\u0438\u0439 \u0432\u0438\u043A\u0438\u043D\u0433\u0441\u043A\u0438\u0439
-    \u0448\u043B\u0435\u043C. +10 \u043A \u0431\u0440\u043E\u043D\u0435"
+    \u0448\u043B\u0435\u043C. +8 \u043A \u0431\u0440\u043E\u043D\u0435"
   icon: {fileID: 21300000, guid: 9204dd7b6cc9d344e8ad9b8bdea7dbbb, type: 3}
   IsSword: 0
   IsHelmet: 1
   IsShield: 0
   IsArmor: 0
-  Def: 10
+  Def: 8
   Damage: 0
-  DropChance: 3.75
+  DropChance: 1
