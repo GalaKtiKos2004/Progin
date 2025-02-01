@@ -5,14 +5,28 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class EnemyFighter : Fighter
 {
+    /// <summary>
+    /// Аниматор для управления анимацией врага.
+    /// </summary>
     [SerializeField] private Animator _animator;
+    
+    /// <summary>
+    /// Время, за которое враг исчезает после смерти.
+    /// </summary>
     [SerializeField] private float _dyingTime;
     
     private SpriteRenderer _spriteRenderer;
     private bool _animationEnding = true;
     private bool _isDead = false;
     
+    /// <summary>
+    /// Событие, вызываемое при атаке врага.
+    /// </summary>
     public event Action Attacked;
+    
+    /// <summary>
+    /// Событие, вызываемое при смерти врага.
+    /// </summary>
     public event Action Died;
 
     private void Awake()
@@ -22,11 +36,13 @@ public class EnemyFighter : Fighter
 
     private void Update()
     {
+        // Если анимация атаки не завершена, враг мертв, есть кулдаун или игрок не в зоне триггера, не атакуем
         if (_animationEnding == false || _isDead || IsCooldown || InTrigger == false)
         {
             return;
         }
 
+        // Если в зону триггера вошел игрок, инициируем атаку
         if (CollidedObject.TryGetComponent(out PlayerFighter _))
         {
             Attacked?.Invoke();
@@ -34,6 +50,9 @@ public class EnemyFighter : Fighter
         }
     }
     
+    /// <summary>
+    /// Метод, вызываемый при смерти врага.
+    /// </summary>
     protected override void OnDied()
     {
         Died?.Invoke();
@@ -41,6 +60,9 @@ public class EnemyFighter : Fighter
         StartCoroutine(Dying());
     }
 
+    /// <summary>
+    /// Выполняет атаку, если враг столкнулся с игроком и находится в зоне триггера.
+    /// </summary>
     private void PreformAttack()
     {
         if (CollidedObject.TryGetComponent(out PlayerFighter playerFighter) && InTrigger)
@@ -49,11 +71,17 @@ public class EnemyFighter : Fighter
         }
     }
 
+    /// <summary>
+    /// Устанавливает флаг окончания анимации атаки.
+    /// </summary>
     private void AnimationEnded()
     {
         _animationEnding = true;
     }
 
+    /// <summary>
+    /// Корутина, выполняющая плавное исчезновение врага после смерти.
+    /// </summary>
     private IEnumerator Dying()
     {
         float elapsedTime = 0f;

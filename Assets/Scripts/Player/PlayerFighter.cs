@@ -2,11 +2,23 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Отвечает за боевую механику игрока, включая атаки, получение урона и смерть.
+/// </summary>
 public class PlayerFighter : Fighter
 {
+    private const string FirstLevelName = "FirstLevel";
+
+    /// <summary> Менеджер экипировки игрока. </summary>
     [SerializeField] private EqupimentManager _equipmentManager;
+
+    /// <summary> Контроллер смены сцен. </summary>
     [SerializeField] private SceneController _sceneController;
-    [SerializeField] private Inventory _inventory; // временно
+
+    /// <summary> Инвентарь игрока (временно). </summary>
+    [SerializeField] private Inventory _inventory;
+
+    /// <summary> Задержка перед перезапуском уровня после смерти. </summary>
     [SerializeField] private float _delay = 3f;
 
     private WaitForSeconds _waitForSeconds;
@@ -40,6 +52,10 @@ public class PlayerFighter : Fighter
         StartCoroutine(DeathDelay());
     }
 
+    /// <summary>
+    /// Вычисляет общий урон игрока, включая бонусы от экипированного оружия.
+    /// </summary>
+    /// <returns>Общий урон игрока.</returns>
     protected override float GetTotalDamage()
     {
         Debug.Log("Attack");
@@ -48,6 +64,10 @@ public class PlayerFighter : Fighter
         return baseDamage + weaponBonus;
     }
 
+    /// <summary>
+    /// Вычисляет общую защиту игрока, включая бонусы от брони, щита и шлема.
+    /// </summary>
+    /// <returns>Общая защита игрока.</returns>
     protected override float GetTotalDefense()
     {
         float baseDefense = base.GetTotalDefense();
@@ -57,6 +77,9 @@ public class PlayerFighter : Fighter
         return baseDefense + armorBonus + shieldBonus + helmetBonus;
     }
 
+    /// <summary>
+    /// Выполняет атаку по противнику, если он находится в зоне удара.
+    /// </summary>
     private void PreformAttack()
     {
         Debug.Log("Preform");
@@ -70,11 +93,14 @@ public class PlayerFighter : Fighter
         _canPress = true;
     }
 
+    /// <summary>
+    /// Задержка перед перезапуском уровня после смерти.
+    /// </summary>
     private IEnumerator DeathDelay()
     {
         yield return _waitForSeconds;
 
         _equipmentManager.Clear();
-        _sceneController.LoadScene("SampleScene", _inventory); // временно
+        _sceneController.LoadScene(FirstLevelName, _inventory);
     }
 }

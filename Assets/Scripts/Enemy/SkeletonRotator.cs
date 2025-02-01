@@ -1,9 +1,16 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// Класс, отвечающий за поворот скелета в сторону цели.
+/// Автоматически поворачивает объект в сторону _target.
+/// </summary>
 [RequireComponent(typeof(EnemyFighter))]
 public class SkeletonRotator : MonoBehaviour
 {
+    /// <summary>
+    /// Цель, на которую должен смотреть скелет.
+    /// </summary>
     [SerializeField] private Transform _target;
 
     private readonly Quaternion _leftRotation = Quaternion.Euler(0, 180, 0);
@@ -27,6 +34,9 @@ public class SkeletonRotator : MonoBehaviour
         _fighter.Died -= OnDied;
     }
 
+    /// <summary>
+    /// Проверяет позицию цели и поворачивает скелет в её сторону.
+    /// </summary>
     private void Update()
     {
         if (_canRotate == false)
@@ -49,6 +59,9 @@ public class SkeletonRotator : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Останавливает поворот скелета при его смерти.
+    /// </summary>
     private void OnDied()
     {
         _canRotate = false;

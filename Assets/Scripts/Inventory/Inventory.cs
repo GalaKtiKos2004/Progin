@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Управляет хранением и взаимодействием с предметами в инвентаре.
+/// </summary>
 public class Inventory : MonoBehaviour
 {
     private const int MaxItems = 15;
@@ -11,8 +14,14 @@ public class Inventory : MonoBehaviour
     [SerializeField] private List<ItemSlot> _equipSlots = new List<ItemSlot>();
     [SerializeField] private InventoryUi _inventoryUi;
 
+    /// <summary> Список предметов в инвентаре (только для чтения). </summary>
     public IReadOnlyList<Item> Items => _items;
-    
+
+    /// <summary>
+    /// Добавляет предмет в инвентарь, если есть место.
+    /// </summary>
+    /// <param name="item">Предмет для добавления.</param>
+    /// <returns>Возвращает true, если предмет успешно добавлен, иначе false.</returns>
     public bool AddItem(Item item)
     {
         if (_items.Count >= MaxItems)
@@ -36,6 +45,10 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Удаляет предмет из указанного слота инвентаря.
+    /// </summary>
+    /// <param name="selectedSlot">Слот, из которого будет удален предмет.</param>
     public void RemoveItemFromSlot(ItemSlot selectedSlot)
     {
         if (selectedSlot == null || selectedSlot.ItemInSlot == null)
@@ -54,6 +67,10 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Загружает предметы из другого инвентаря, очищая текущий список.
+    /// </summary>
+    /// <param name="items">Список предметов для загрузки.</param>
     public void LoadFromOtherInventory(IReadOnlyList<Item> items)
     {
         _items.Clear();

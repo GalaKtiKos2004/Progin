@@ -1,10 +1,16 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// Отвечает за передвижение игрока, обработку ввода и физику.
+/// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMover : MonoBehaviour
 {
+    /// <summary> Скорость передвижения игрока. </summary>
     [SerializeField] private float _moveSpeed = 5f;
+
+    /// <summary> Компонент, отвечающий за боевую механику игрока. </summary>
     [SerializeField] private PlayerFighter _playerFighter;
 
     private Rigidbody2D _rigidbody;
@@ -20,8 +26,8 @@ public class PlayerMover : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _playerFighter = GetComponent<PlayerFighter>();
-        _rigidbody.gravityScale = 0; // Отключаем гравитацию для 2D-игрока
-        _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation; // Замораживаем вращение
+        _rigidbody.gravityScale = 0;
+        _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     private void OnEnable()
@@ -34,6 +40,9 @@ public class PlayerMover : MonoBehaviour
         _playerFighter.Died -= OnDied;
     }
 
+    /// <summary>
+    /// Останавливает движение игрока после его смерти.
+    /// </summary>
     private void OnDied()
     {
         _isDied = true;
