@@ -29,9 +29,9 @@ public class SceneController : MonoBehaviour
     /// </summary>
     /// <param name="sceneName">Название сцены для загрузки.</param>
     /// <param name="currentInventory">Текущий инвентарь игрока, который нужно сохранить.</param>
-    public void LoadScene(string sceneName, Inventory currentInventory)
+    public void LoadScene(string sceneName, Inventory currentInventory, EqupimentManager equipment)
     {
-        GameSession.Instance.SaveInventory(currentInventory);
+        GameSession.Instance.SaveInventory(currentInventory, equipment);
         SceneManager.LoadScene(sceneName);
     }
 
@@ -43,10 +43,11 @@ public class SceneController : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Inventory newInventory = FindObjectOfType<Inventory>();
+        EqupimentManager equipment = FindObjectOfType<EqupimentManager>();
 
         if (newInventory != null)
         {
-            GameSession.Instance.LoadInventory(newInventory);
+            GameSession.Instance.LoadInventory(newInventory, equipment);
         }
     }
 }

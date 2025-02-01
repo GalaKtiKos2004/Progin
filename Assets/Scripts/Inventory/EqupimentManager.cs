@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -30,6 +31,11 @@ public class EqupimentManager : MonoBehaviour
     /// <param name="item">Предмет для экипировки.</param>
     public void EquipItem(Item item)
     {
+        if (item == null)
+        {
+            return;
+        }
+        
         if (item.IsSword)
         {
             SwapEquipment(_weaponSlot, item);
@@ -45,6 +51,17 @@ public class EqupimentManager : MonoBehaviour
         else if (item.IsHelmet)
         {
             SwapEquipment(_helmetSlot, item);
+        }
+    }
+
+    // <summary>
+    /// Загружает весь инвентарь.
+    /// </summary>
+    public void Load(IReadOnlyList<Item> items)
+    {
+        foreach (var item in items)
+        {
+            EquipItem(item);
         }
     }
 

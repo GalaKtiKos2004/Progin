@@ -17,6 +17,8 @@ public class PlayerFighter : Fighter
 
     /// <summary> Инвентарь игрока (временно). </summary>
     [SerializeField] private Inventory _inventory;
+    
+    [SerializeField] private EqupimentManager _equipment;
 
     /// <summary> Задержка перед перезапуском уровня после смерти. </summary>
     [SerializeField] private float _delay = 3f;
@@ -101,6 +103,6 @@ public class PlayerFighter : Fighter
         yield return _waitForSeconds;
 
         _equipmentManager.Clear();
-        _sceneController.LoadScene(FirstLevelName, _inventory);
+        _sceneController.LoadScene(FirstLevelName, _inventory, _equipment);
     }
 }

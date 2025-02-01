@@ -212,37 +212,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1684607514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &20601779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 20601780}
-  m_Layer: 0
-  m_Name: Skeletons
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &20601780
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20601779}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.574005, y: 0.3614162, z: 0.049875434}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &28654552
 GameObject:
   m_ObjectHideFlags: 3
@@ -991,6 +960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4747141063561081660, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6791538
@@ -1253,6 +1226,7 @@ MonoBehaviour:
   - {fileID: 1785140760}
   - {fileID: 2066658665}
   _inventory: {fileID: 853754451}
+  _equipment: {fileID: 853754450}
   _sceneController: {fileID: 1152148085}
   _delay: 3
   _newSceneName: FirstLevel
@@ -1553,6 +1527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510337438121762039, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 853754451}
     - target: {fileID: 8068257474583074500, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8885016
@@ -2395,7 +2373,7 @@ Tilemap:
       - {fileID: -851947748, guid: 4891a0bae05d66c40bd205eecabbab6b, type: 3}
       - {fileID: 1464734274, guid: b41101f2d3d1dd84c904f408ff127f8f, type: 3}
       - {fileID: 437070423, guid: 704b35af381930345a711415f8855bb6, type: 3}
-      m_AnimationSpeed: 7.0000005
+      m_AnimationSpeed: 7
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -15, y: -3, z: 0}
@@ -2434,7 +2412,7 @@ Tilemap:
       - {fileID: 1342456207, guid: 4891a0bae05d66c40bd205eecabbab6b, type: 3}
       - {fileID: 227616688, guid: b41101f2d3d1dd84c904f408ff127f8f, type: 3}
       - {fileID: -707193070, guid: 704b35af381930345a711415f8855bb6, type: 3}
-      m_AnimationSpeed: 7.0000005
+      m_AnimationSpeed: 7
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -12, y: -3, z: 0}
@@ -2629,7 +2607,7 @@ Tilemap:
       - {fileID: 967839415, guid: 4891a0bae05d66c40bd205eecabbab6b, type: 3}
       - {fileID: 1667129875, guid: b41101f2d3d1dd84c904f408ff127f8f, type: 3}
       - {fileID: 1609000693, guid: 704b35af381930345a711415f8855bb6, type: 3}
-      m_AnimationSpeed: 7.0000005
+      m_AnimationSpeed: 7
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -12, y: 0, z: 0}
@@ -7937,37 +7915,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryUi: {fileID: 853754452}
---- !u!1 &841824173
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 841824174}
-  m_Layer: 0
-  m_Name: Chests
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &841824174
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841824173}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.574005, y: 0.3614162, z: 0.049875434}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &852960778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7980,6 +7927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510337438121762039, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 853754451}
     - target: {fileID: 8068257474583074500, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.537957
@@ -8392,6 +8343,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3431242343129455563, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 6267944235925960661, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
       propertyPath: m_Name
       value: BigSkeleton Variant
@@ -8579,6 +8534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4747141063561081660, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.7034872
@@ -8645,6 +8604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4747141063561081660, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.7482864
@@ -8864,6 +8827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510337438121762039, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 853754451}
     - target: {fileID: 8068257474583074500, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3812096
@@ -8926,6 +8893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510337438121762039, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 853754451}
     - target: {fileID: 8068257474583074500, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5214119
@@ -9138,6 +9109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4747141063561081660, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.19619
@@ -9549,6 +9524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510337438121762039, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 853754451}
     - target: {fileID: 8068257474583074500, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8544298
@@ -9982,6 +9961,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510337438121762039, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 853754451}
     - target: {fileID: 8068257474583074500, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.895305
@@ -10044,6 +10027,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510337438121762039, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 853754451}
     - target: {fileID: 8068257474583074500, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9761214
@@ -10303,6 +10290,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3431242343129455563, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 6267944235925960661, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
       propertyPath: m_Name
       value: BigSkeleton Variant (1)
@@ -10808,6 +10799,7 @@ MonoBehaviour:
   _equipmentManager: {fileID: 853754450}
   _sceneController: {fileID: 1152148085}
   _inventory: {fileID: 853754451}
+  _equipment: {fileID: 0}
   _delay: 3
 --- !u!114 &1684607521
 MonoBehaviour:
@@ -10934,6 +10926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4747141063561081660, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.2302692
@@ -11054,6 +11050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4747141063561081660, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6168296
@@ -11287,6 +11287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3431242343129455563, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 6267944235925960661, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
       propertyPath: m_Name
       value: BigSkeleton Variant (2)
@@ -11328,6 +11332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4747141063561081660, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7229783
@@ -11390,6 +11398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510337438121762039, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 853754451}
     - target: {fileID: 8068257474583074500, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.6684377
@@ -11519,6 +11531,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -11
       objectReference: {fileID: 0}
+    - target: {fileID: 6510337438121762039, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 853754451}
     - target: {fileID: 8068257474583074500, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.0287018
@@ -11581,6 +11597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510337438121762039, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 853754451}
     - target: {fileID: 8068257474583074500, guid: c7e33ca455f756d478c05cb7b9ae548b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.8602502
@@ -12121,6 +12141,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3431242343129455563, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
     - target: {fileID: 6267944235925960661, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
       propertyPath: m_Name
       value: BigSkeleton Variant (3)
@@ -12252,8 +12276,6 @@ SceneRoots:
   - {fileID: 1684607514}
   - {fileID: 479306328}
   - {fileID: 1243876955}
-  - {fileID: 841824174}
-  - {fileID: 20601780}
   - {fileID: 1582553902}
   - {fileID: 853754449}
   - {fileID: 1152148086}

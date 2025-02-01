@@ -13,6 +13,9 @@ public class LevelManager : MonoBehaviour
 
     /// <summary> Инвентарь игрока. </summary>
     [SerializeField] private Inventory _inventory;
+    
+    /// <summary> Экипировка игрока. </summary>
+    [SerializeField] private EqupimentManager _equipment;
 
     /// <summary> Контроллер смены сцен. </summary>
     [SerializeField] private SceneController _sceneController;
@@ -71,6 +74,6 @@ public class LevelManager : MonoBehaviour
     {
         yield return _wait;
 
-        _sceneController.LoadScene(_newSceneName, _inventory);
+        _sceneController.LoadScene(_newSceneName, _inventory, _equipment);
     }
 }
