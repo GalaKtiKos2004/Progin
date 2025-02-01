@@ -10,6 +10,7 @@ public class PlayerFighter : Fighter
     [SerializeField] private float _delay = 3f;
 
     private WaitForSeconds _waitForSeconds;
+    private bool _canPress = true;
 
     public event Action Attacked;
     public event Action Died;
@@ -21,7 +22,7 @@ public class PlayerFighter : Fighter
 
     private void Update()
     {
-        if (IsCooldown)
+        if (IsCooldown || _canPress == false)
         {
             return;
         }
@@ -29,11 +30,7 @@ public class PlayerFighter : Fighter
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Attacked?.Invoke();
-
-            if (InTrigger && CollidedObject.TryGetComponent(out EnemyFighter enemyFighter))
-            {
-                Attack(enemyFighter);
-            }
+            _canPress = false;
         }
     }
 
@@ -45,6 +42,7 @@ public class PlayerFighter : Fighter
 
     protected override float GetTotalDamage()
     {
+        Debug.Log("Attack");
         float baseDamage = base.GetTotalDamage();
         float weaponBonus = _equipmentManager.Weapon != null ? _equipmentManager.Weapon.Damage : 0;
         return baseDamage + weaponBonus;
@@ -59,10 +57,23 @@ public class PlayerFighter : Fighter
         return baseDefense + armorBonus + shieldBonus + helmetBonus;
     }
 
+    private void PreformAttack()
+    {
+        Debug.Log("Preform");
+        
+        if (InTrigger && CollidedObject.TryGetComponent(out EnemyFighter enemyFighter))
+        {
+            Debug.Log("Preform Attack");
+            Attack(enemyFighter);
+        }
+
+        _canPress = true;
+    }
+
     private IEnumerator DeathDelay()
     {
         yield return _waitForSeconds;
-        
+
         _equipmentManager.Clear();
         _sceneController.LoadScene("SampleScene", _inventory); // временно
     }

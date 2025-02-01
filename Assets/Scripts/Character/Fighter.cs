@@ -15,6 +15,8 @@ public abstract class Fighter : MonoBehaviour
     protected bool InTrigger { get; private set; } = false;
     protected Collider2D CollidedObject { get; private set; }
     protected bool IsCooldown { get; private set; } = false;
+    
+    public bool IsDead { get; protected set; } = false;
 
     private void OnEnable()
     {
@@ -36,11 +38,14 @@ public abstract class Fighter : MonoBehaviour
         _health.Died += OnDied;
     }
 
-    protected abstract void OnDied();
+    protected virtual void OnDied()
+    {
+        IsDead = true;
+    }
 
     protected void Attack(Fighter fighter)
     {
-        if (IsCooldown == false)
+        if (IsCooldown == false && fighter.IsDead == false)
         {
             float totalDamage = GetTotalDamage();
             fighter.TakeDamage(totalDamage);
@@ -67,11 +72,24 @@ public abstract class Fighter : MonoBehaviour
 
     private void OnTriggerEntered(Collider2D other)
     {
+        if (other.TryGetComponent(out Fighter _) == false)
+        {
+            return;
+        }
+        
         InTrigger = true;
         CollidedObject = other;
     }
 
-    private void OnTriggerExited(Collider2D other) => InTrigger = false;
+    private void OnTriggerExited(Collider2D other)
+    {
+        if (other.TryGetComponent(out Fighter _) == false)
+        {
+            return;
+        }
+        
+        InTrigger = false;
+    }
 
     private IEnumerator Cooldown()
     {

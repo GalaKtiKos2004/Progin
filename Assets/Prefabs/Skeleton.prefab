@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 4411695230581451447}
   - component: {fileID: 3432265762679882432}
   - component: {fileID: 4747141063561081660}
+  - component: {fileID: -1508641973008053782}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -313,7 +314,7 @@ Transform:
   m_GameObject: {fileID: 4072156817066172194}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.8875685, y: -0.8386353, z: -0.049875434}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -497,6 +498,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
+--- !u!114 &-1508641973008053782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4072156817066172194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5458bc217e58434429755f198f192ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 0}
 --- !u!1 &8783970178081398952
 GameObject:
   m_ObjectHideFlags: 0

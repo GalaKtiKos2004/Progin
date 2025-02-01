@@ -22,14 +22,13 @@ public class EnemyFighter : Fighter
 
     private void Update()
     {
-        if (InTrigger == false || _animationEnding == false || _isDead || IsCooldown)
+        if (_animationEnding == false || _isDead || IsCooldown || InTrigger == false)
         {
             return;
         }
 
-        if (CollidedObject.TryGetComponent(out PlayerFighter playerFighter))
+        if (CollidedObject.TryGetComponent(out PlayerFighter _))
         {
-            Attack(playerFighter);
             Attacked?.Invoke();
             _animationEnding = false;
         }
@@ -40,6 +39,14 @@ public class EnemyFighter : Fighter
         Died?.Invoke();
         _isDead = true;
         StartCoroutine(Dying());
+    }
+
+    private void PreformAttack()
+    {
+        if (CollidedObject.TryGetComponent(out PlayerFighter playerFighter) && InTrigger)
+        {
+            Attack(playerFighter);
+        }
     }
 
     private void AnimationEnded()
