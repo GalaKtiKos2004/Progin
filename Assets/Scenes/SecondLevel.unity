@@ -10799,7 +10799,7 @@ MonoBehaviour:
   _equipmentManager: {fileID: 853754450}
   _sceneController: {fileID: 1152148085}
   _inventory: {fileID: 853754451}
-  _equipment: {fileID: 0}
+  _equipment: {fileID: 853754450}
   _delay: 3
 --- !u!114 &1684607521
 MonoBehaviour:

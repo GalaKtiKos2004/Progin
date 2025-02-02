@@ -5,7 +5,6 @@ using UnityEngine;
 /// Класс, отвечающий за поворот скелета в сторону цели.
 /// Автоматически поворачивает объект в сторону _target.
 /// </summary>
-[RequireComponent(typeof(EnemyFighter))]
 public class SkeletonRotator : MonoBehaviour
 {
     /// <summary>
@@ -13,16 +12,21 @@ public class SkeletonRotator : MonoBehaviour
     /// </summary>
     [SerializeField] private Transform _target;
 
+    /// <summary>
+    /// Скелет, которого надо повернуть
+    /// </summary>
+    [SerializeField] private Transform _skeleton;
+
+    /// <summary>
+    /// Ссылка на компонент файтера игрока.
+    /// </summary>
+    [SerializeField] private EnemyFighter _fighter;
+
+
     private readonly Quaternion _leftRotation = Quaternion.Euler(0, 180, 0);
     private readonly Quaternion _rightRotation = Quaternion.Euler(0, 0, 0);
-    
-    private EnemyFighter _fighter;
     private bool _canRotate = true;
-
-    private void Awake()
-    {
-        _fighter = GetComponent<EnemyFighter>();
-    }
+    private bool _inTrigger = false;
 
     private void OnEnable()
     {
@@ -39,23 +43,34 @@ public class SkeletonRotator : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (_canRotate == false)
-        {
-            return;
-        }
-        
-        if (_target == null)
+        if (_canRotate == false || _inTrigger == false || _target == null)
         {
             return;
         }
 
         if (_target.position.x > transform.position.x)
         {
-            transform.rotation = _rightRotation;
+            _skeleton.rotation = _rightRotation;
         }
         else
         {
-            transform.rotation = _leftRotation;
+            _skeleton.rotation = _leftRotation;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.transform == _target)
+        {
+            _inTrigger = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.transform == _target)
+        {
+            _inTrigger = false;
         }
     }
 

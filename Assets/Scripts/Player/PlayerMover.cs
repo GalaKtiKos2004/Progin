@@ -81,4 +81,9 @@ public class PlayerMover : MonoBehaviour
         // Перемещение через физику
         _rigidbody.velocity = _movementInput * _moveSpeed;
     }
+
+    public void SetSpeed(float multiplier)
+    {
+        _moveSpeed *= multiplier;
+    }
 }
