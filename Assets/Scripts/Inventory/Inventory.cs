@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -16,6 +17,11 @@ public class Inventory : MonoBehaviour
 
     /// <summary> Список предметов в инвентаре (только для чтения). </summary>
     public IReadOnlyList<Item> Items => _items;
+
+    private void Start()
+    {
+        LoadFromOtherInventory(_items.ToList());
+    }
 
     /// <summary>
     /// Добавляет предмет в инвентарь, если есть место.

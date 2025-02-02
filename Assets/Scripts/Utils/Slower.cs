@@ -6,17 +6,17 @@ public class Slower : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out PlayerMover playerMover))
+        if (other.TryGetComponent(out PlayerSlower playerSlower))
         {
-            playerMover.SetSpeed(1 / _speedMultiplier);
+            playerSlower.PlayerMover.SetSpeed(1 / _speedMultiplier);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.TryGetComponent(out PlayerMover playerMover))
+        if (other.TryGetComponent(out PlayerSlower playerSlower))
         {
-            playerMover.SetSpeed(_speedMultiplier);
+            playerSlower.PlayerMover.SetSpeed(_speedMultiplier);
         }
     }
 }
