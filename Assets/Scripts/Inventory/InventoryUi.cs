@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -55,6 +54,8 @@ public class InventoryUi : MonoBehaviour
             _isActive = !_isActive;
             _canvasGroup.alpha = _isActive ? 1 : 0;
             _canvasGroup.blocksRaycasts = _isActive;
+            _useButton.interactable = _isActive;
+            _dropButton.interactable = _isActive;
         }
     }
 

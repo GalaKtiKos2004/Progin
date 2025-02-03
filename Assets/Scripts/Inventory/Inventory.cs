@@ -18,11 +18,6 @@ public class Inventory : MonoBehaviour
     /// <summary> Список предметов в инвентаре (только для чтения). </summary>
     public IReadOnlyList<Item> Items => _items;
 
-    private void Start()
-    {
-        LoadFromOtherInventory(_items.ToList());
-    }
-
     /// <summary>
     /// Добавляет предмет в инвентарь, если есть место.
     /// </summary>
@@ -30,19 +25,12 @@ public class Inventory : MonoBehaviour
     /// <returns>Возвращает true, если предмет успешно добавлен, иначе false.</returns>
     public bool AddItem(Item item)
     {
-        if (_items.Count >= MaxItems)
-        {
-            Debug.Log("Инвентарь заполнен!");
-            return false;
-        }
-
-        _items.Add(item);
-
         foreach (var slot in _itemSlots)
         {
             if (slot.CanSetItem)
             {
                 slot.SetItem(item);
+                _items.Add(item);
                 return true;
             }
         }
@@ -68,6 +56,12 @@ public class Inventory : MonoBehaviour
         if (_items.Contains(itemToRemove))
         {
             _items.Remove(itemToRemove);
+            selectedSlot.Clear();
+            Debug.Log($"Удален предмет: {itemToRemove.Name}");
+        }
+        else if (_equipSlots.Contains(selectedSlot))
+        {
+            _equipSlots.Remove(selectedSlot);
             selectedSlot.Clear();
             Debug.Log($"Удален предмет: {itemToRemove.Name}");
         }
