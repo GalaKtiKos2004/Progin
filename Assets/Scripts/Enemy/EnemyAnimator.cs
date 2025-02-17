@@ -4,14 +4,17 @@ using UnityEngine;
 /// Управляет анимациями врага, реагируя на события атаки и смерти.
 /// </summary>
 [RequireComponent(typeof(EnemyFighter))]
+[RequireComponent(typeof(SkeletonMover))]
 [RequireComponent(typeof(Animator))]
 public class EnemyAnimator : MonoBehaviour
 {
     private const string Attack = "Attack";
     private const string Death = "Death";
+    private const string Move = "Speed";
     
     private Animator _animator;
     private EnemyFighter _enemyFighter;
+    private SkeletonMover _skeletonMover;
 
     /// <summary>
     /// Инициализирует компоненты Animator и EnemyFighter.
@@ -20,6 +23,7 @@ public class EnemyAnimator : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _enemyFighter = GetComponent<EnemyFighter>();
+        _skeletonMover = GetComponent<SkeletonMover>();
     }
 
     /// <summary>
@@ -29,6 +33,7 @@ public class EnemyAnimator : MonoBehaviour
     {
         _enemyFighter.Attacked += OnAttack;
         _enemyFighter.Died += OnDied;
+        _skeletonMover.Moved += OnMove;
     }
 
     /// <summary>
@@ -38,6 +43,7 @@ public class EnemyAnimator : MonoBehaviour
     {
         _enemyFighter.Attacked -= OnAttack;
         _enemyFighter.Died -= OnDied;
+        _skeletonMover.Moved -= OnMove;
     }
 
     /// <summary>
@@ -54,5 +60,10 @@ public class EnemyAnimator : MonoBehaviour
     private void OnDied()
     {
         _animator.SetTrigger(Death);
+    }
+
+    private void OnMove(float speed)
+    {
+        _animator.SetFloat(Move, speed);
     }
 }

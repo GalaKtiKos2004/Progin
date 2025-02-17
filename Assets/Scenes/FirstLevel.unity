@@ -189,6 +189,22 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 519420034}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _rayLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _detectionRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _obstacleMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.68647456
@@ -429,13 +445,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93602899}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -575,8 +591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10758333, y: 0.457}
   m_AnchorMax: {x: 0.25369793, y: 0.5477409}
-  m_AnchoredPosition: {x: 0, y: -1.5}
-  m_SizeDelta: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &129913067
 MonoBehaviour:
@@ -641,13 +657,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129913065}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -921,13 +937,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190503732}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1065,6 +1081,22 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 519420034}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _rayLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _detectionRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _obstacleMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6535637
@@ -1413,13 +1445,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432503127}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1817,7 +1849,7 @@ Tilemap:
       - {fileID: -1947702898, guid: 4891a0bae05d66c40bd205eecabbab6b, type: 3}
       - {fileID: 511295198, guid: b41101f2d3d1dd84c904f408ff127f8f, type: 3}
       - {fileID: -1154445548, guid: 704b35af381930345a711415f8855bb6, type: 3}
-      m_AnimationSpeed: 7.0000005
+      m_AnimationSpeed: 7
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 4, y: 4, z: 0}
@@ -6803,13 +6835,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531933541}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6949,13 +6981,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558824273}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7095,13 +7127,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696429728}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7167,6 +7199,22 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 519420034}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _rayLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _detectionRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _obstacleMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.44607
@@ -7330,13 +7378,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794224770}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8609,13 +8657,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961480822}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8677,6 +8725,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 20601780}
     m_Modifications:
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _rayLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _detectionRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _obstacleMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 391594366665531677, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
       propertyPath: _audioSource
       value: 
@@ -8852,13 +8916,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019531219}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9064,13 +9128,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074426232}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9210,13 +9274,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123453137}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9434,13 +9498,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190393040}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9580,13 +9644,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229119651}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9726,13 +9790,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242560904}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9940,13 +10004,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328892256}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10179,8 +10243,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10758333, y: 0.6503704}
   m_AnchorMax: {x: 0.25369793, y: 0.7434815}
-  m_AnchoredPosition: {x: 1.5, y: -1.5}
-  m_SizeDelta: {x: -15.000013, y: -13}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642235523
 MonoBehaviour:
@@ -10245,13 +10309,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642235521}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10422,6 +10486,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 20601780}
     m_Modifications:
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _rayLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _detectionRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _obstacleMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 391594366665531677, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
       propertyPath: _audioSource
       value: 
@@ -10597,13 +10677,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902682460}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10743,13 +10823,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952209508}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10815,6 +10895,22 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 519420034}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _rayLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _detectionRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _obstacleMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.189529
@@ -10978,13 +11074,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979450870}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11356,6 +11452,22 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 519420034}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _rayLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _detectionRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647215832732431043, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
+      propertyPath: _obstacleMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8624307416325725859, guid: fe9b0983b733c8d4b8c52bbefbe3c21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.8875685
@@ -11409,6 +11521,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 20601780}
     m_Modifications:
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1684607514}
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _rayLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _detectionRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 315073124741323316, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: _obstacleMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 391594366665531677, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
       propertyPath: _audioSource
       value: 
@@ -11477,6 +11605,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigSkeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 8609511799290925276, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609511799290925276, guid: 4046b751e61c408419b86195bf5c360f, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11510,6 +11646,10 @@ PrefabInstance:
       propertyPath: _equipmentManager
       value: 
       objectReference: {fileID: 853754450}
+    - target: {fileID: 3098173540654540908, guid: d74b5f9487a45b04e95c8693fc4d1946, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3188558125513875512, guid: d74b5f9487a45b04e95c8693fc4d1946, type: 3}
       propertyPath: _healthBar
       value: 
@@ -11558,10 +11698,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4634652159403824209, guid: d74b5f9487a45b04e95c8693fc4d1946, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5151194330699975049, guid: d74b5f9487a45b04e95c8693fc4d1946, type: 3}
       propertyPath: _levelManager
       value: 
       objectReference: {fileID: 430151676}
+    - target: {fileID: 7051483114358271046, guid: d74b5f9487a45b04e95c8693fc4d1946, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

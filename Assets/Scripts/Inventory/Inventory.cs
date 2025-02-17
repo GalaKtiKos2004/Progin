@@ -27,7 +27,7 @@ public class Inventory : MonoBehaviour
     {
         foreach (var slot in _itemSlots)
         {
-            if (slot.CanSetItem)
+            if (slot.IsEmpty)
             {
                 slot.SetItem(item);
                 _items.Add(item);
