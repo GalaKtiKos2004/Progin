@@ -7,6 +7,7 @@ public class FirstSceneLoader : MonoBehaviour
     
     public void LoadScene()
     {
+        Debug.Log("start");
         SceneManager.LoadScene(_sceneName);
     }
 }

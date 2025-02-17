@@ -30,6 +30,7 @@ public class BlackBoxStart : MonoBehaviour
     private void FadeToBlack()
     {
         _image.DOFade(1f, _fadeDuration);
+        StartCoroutine(NewScene());
     }
 
     private IEnumerator NewScene()
